@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  
+  <style>
+     *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+  font-family: "Red Hat Display", sans-serif;
+  min-height: 100vh;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+  position: relative;
+  font-size: 16px;
+    }
+  
+ .container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  background: white ;
+  border-radius: 20px;
+  overflow: hidden;
+ }
+.content{
+  padding: 7%;
+  text-align: center;
+}
+.title{
+      color:hsl(223, 47%, 23%);
+      font-weight: 900;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }       
+  .content p.subtitle{
+    color: rgb(83, 67, 67);
+    margin-bottom: 25px;
+  }
+  .music-box{
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 12px;
+      display: flex;
+      padding: 25px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .music-box-left{
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+    .music-box-left div{
+      margin-left: 20px;
+    }
+    .music-box-left div h5{
+      font-weight: 900;
+      font-size: 15px;
+      color: hsl(223, 47%, 23%) ;
+    }
+    .music-box-left div p{
+      font: size 14px; 
+       
+    }
+    .music-box a{
+font-weight: 900;
+color: hsl(223, 91%, 57%);
+transition: color .3s ease ;
+    }
+    .music-box a:hover{
+      text-decoration: none;
+      color: hsl(245, 75%, 52%);
+    }
+    a.proceed-btn{
+display: block;
+text-decoration: none;
+color: white;
+background-color: hsl(245, 75%, 52%);
+padding: 20px 0;
+border-radius: 12px;
+margin: 30px 0;
+transition: color .3s ease;
+    }
+    a.proceed-btn:hover{
+      background-color:hsl(224, 92%, 68%); 
+    }
+    a.cancel-btn{
+      color: hsl(225, 16%, 46%);
+      font-weight: 900;
+      transition: color .3s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+    a.cancel-btn:hover{
+      background-color: hsl(223, 47%, 23%); ;
+    }
+    @media (max-width: 425px){
+   body{
+    background-image: url(./images/pattern-background-mobile.svg);
+    font-size: 14px;
+   }
+      .container{
+     max-width: 87%;
+    }
+    .title{
+      font-size: 23px;
+    } 
+    div.music-box{
+      padding: 10px;
+    }
+    .music-box-left div{
+margin-left: 5px;
+    } 
+    a.proceed-btn, a.cancel-btn, .music-box a{
+font-size: 13px;
+    }
+    .content{
+    padding: 9% 7%;
+  }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <img src="./images/illustration-hero.svg" alt="hero">
+  </div>
+  <div class="content">
+    <h2 class="title">  Order Summary</h2>
+    <p class="subtitle">
+      You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!
+    </p>
+    <div class="music-box">
+      <div class="music-box-left">
+        <img src="./images/icon-music.svg" alt="music">
+        <div>
+          <h5>Annual Plan</h5>
+          <p> $59.99/year</p>
+        </div>
+      </div>
+      <a href="#">Change</a>
+    </div>
+    <a href="proceed-btn" class="proceed-btn">Proceed to Payment</a>
+    <a href="cancel" class="cancel-btn">Cancel Order</a>
+  </div>
+</div>
+
+  
+
+</body>
+</html>
